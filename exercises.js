@@ -82,7 +82,7 @@ for (var i = 0; i < 100; i++) {
 //	i++;
     }
 }
-console.log(evenNumArr);
+console.log("evenNumArr: " + evenNumArr);
 console.log(evenNumArr.length);
 
 /* 6) Up the Odds
@@ -106,6 +106,13 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
+var oopsArray = [ 'turn' , , 'down' , , 'for' , , 'what' ];
+for (var i = 0; i < oopsArray.length; i++) {
+    if (i % 2 === 1) {
+	oopsArray[i] = 'nope';
+    }
+}
+console.log("oopsArray: " + oopsArray);
 
 
 /* 8) Is It There Oops
@@ -119,7 +126,11 @@ down
 nope
 turn
 */
-
+var newOopsArr = [];
+for (var i = oopsArray.length-1; i >= 0 ; i--) {
+    newOopsArr.push(oopsArray[i]);
+}
+console.log("newOopsArr: " + newOopsArr);
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
