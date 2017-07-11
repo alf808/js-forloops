@@ -141,7 +141,18 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
+var napSchedule = [false, false, true, false, true, true];
 
+function nap (schedule) {
+    for (var i = 0; i < schedule.length; i++) {
+	if (schedule[i]) {
+	    console.log("ZzZzZzZz");
+	} else {
+	    console.log("Gotta get coding!");
+	}
+    }
+}
+nap(napSchedule);
 
 
 /* 10) Copy Pasta
@@ -155,8 +166,15 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
+var valuesArray = [99, 66, 829, 1941, 8, 76];
 
-
+function copyArray(originArray,destinationArray) {
+    for (var i = 0; i < originArray.length; i++) {
+	destinationArray.push(originArray[i]);
+    }
+    console.log(destinationArray);
+}
+copyArray(valuesArray, []);
 
 /*Final Boss*/
 
@@ -164,8 +182,21 @@ Inside of this function write a for-loop that will iterate through the contents 
 Declare a variable named `topQuote` and assign it to a String value of your favorite one line quote.
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
+var topQuote = "just a spoonful of sugar makes the medicines go down";
 
-
+function getLongestWord(str) {
+    var tqArray = [];
+    tqArray = str.split(" ");
+    var currentWordLength = 0, currentLongest = "";
+    for (var i = 0; i < tqArray.length; i++) {
+	if (tqArray[i].length > currentWordLength) {
+	    currentWordLength = tqArray[i].length;
+	    currentLongest = tqArray[i];
+	}
+    }
+    return currentLongest;
+}
+console.log("longest word: " + getLongestWord(topQuote));
 
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
