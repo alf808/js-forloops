@@ -206,8 +206,18 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
    @return Datatype: Array
 
 */
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
 
-
+function generateArrayOfStrings(storage) {
+    var newStorage = [];
+    for (var i = 0; i < storage.length; i++) {
+	if (typeof storage[i] === "string") {
+	    newStorage.push(storage[i]);
+	}
+    }
+    return newStorage;
+}
+console.log(generateArrayOfStrings(miscStorage));
 
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
@@ -215,6 +225,17 @@ Write a function that will capitalize the first letter in each word in the phras
 
 var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
 
+function capitalizeFirstLetter(phrase) {
+    var newPhraseArray = [], anotherArr = [];
+    newPhraseArray = phrase.split(" ");
+    //console.log(newPhraseArray);
+    for (var i = 0; i < newPhraseArray.length; i++) {
+	anotherArr.push(newPhraseArray[i].charAt(0).toUpperCase() + newPhraseArray[i].slice(1));
+    }
+    return anotherArr.join();
+}
+
+console.log(capitalizeFirstLetter(myWay));
 
 
 /* 14) Back to School
