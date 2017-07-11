@@ -152,6 +152,7 @@ function nap (schedule) {
 	}
     }
 }
+console.log("napschedule");
 nap(napSchedule);
 
 
@@ -174,6 +175,7 @@ function copyArray(originArray,destinationArray) {
     }
     console.log(destinationArray);
 }
+console.log("copied array");
 copyArray(valuesArray, []);
 
 /*Final Boss*/
@@ -217,7 +219,7 @@ function generateArrayOfStrings(storage) {
     }
     return newStorage;
 }
-console.log(generateArrayOfStrings(miscStorage));
+console.log("generateArray: " + generateArrayOfStrings(miscStorage));
 
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each And Every Highway. But More, Much More Than This. I Did It My Way."  
@@ -235,7 +237,7 @@ function capitalizeFirstLetter(phrase) {
     return anotherArr.join();
 }
 
-console.log(capitalizeFirstLetter(myWay));
+console.log("capitalizeFirstLetter: " + capitalizeFirstLetter(myWay));
 
 
 /* 14) Back to School
@@ -297,4 +299,5 @@ function graduateAndSetNewClass(cohort) {
     }
 }
 graduateAndSetNewClass(currentCohort);
-console.log(currentCohort);
+console.log("updated cohort:\n", currentCohort);
+
